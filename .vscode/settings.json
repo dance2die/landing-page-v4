@@ -1,0 +1,17 @@
+{
+    "workbench.colorCustomizations": {
+        "[Cobalt2]": {},
+        "activityBar.background": "#89d688",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#7172ce",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "titleBar.activeBackground": "#63c962",
+        "titleBar.inactiveBackground": "#63c96299",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveForeground": "#15202b99",
+        "statusBar.background": "#63c962",
+        "statusBarItem.hoverBackground": "#41b83f",
+        "statusBar.foreground": "#15202b"
+    }
+}
