@@ -7,3 +7,15 @@
   justify-content: center;
   align-items: center;
 }
+
+.name {
+  font-size: 3rem;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: 20px;
+    border-bottom: 1px solid #98b232;
+  }
+}

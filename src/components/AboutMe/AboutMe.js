@@ -4,16 +4,16 @@ import Avatar from '../Avatar'
 
 import './AboutMe.scss'
 
-const Title = () => <div>Title</div>
-const Divider = () => <div>Divider</div>
-const Detail = () => <div>Detail</div>
-const Social = () => <div>Social</div>
+const Name = () => <h2 className="name">Sung M. Kim</h2>
+const Divider = () => <div className="divider">Divider</div>
+const Detail = () => <div className="detail">Detail</div>
+const Social = () => <div className="social">Social</div>
 
 function AboutMe() {
   return (
     <div className="about-me">
       <Avatar />
-      <Title />
+      <Name />
       <Divider />
       <Detail />
       <Social />
