@@ -1,7 +1,9 @@
 import React from 'react'
 
+import './Description.scss'
+
 function Description() {
-  return 'Description'
+  return <div className="description">Description</div>
 }
 
 export default Description
