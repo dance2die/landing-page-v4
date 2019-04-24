@@ -1,1 +1,13 @@
-@import 'layout.reset.scss';
+@import 'layout.reset';
+
+$break-small: 600px;
+$media-small: 'screen and (max-width: 600px)';
+
+main {
+  columns: 2;
+  column-gap: 0;
+
+  @media #{$media-small} {
+    columns: 1;
+  }
+}
