@@ -4,10 +4,12 @@ $break-small: 600px;
 $media-small: 'screen and (max-width: 600px)';
 
 main {
-  columns: 2;
-  column-gap: 0;
+  display: grid;
+  grid:
+    1fr
+    / 1fr 1fr;
 
   @media #{$media-small} {
-    columns: 1;
+    grid: 1fr / 1fr;
   }
 }

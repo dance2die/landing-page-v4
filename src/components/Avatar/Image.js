@@ -12,21 +12,31 @@ import Img from 'gatsby-image'
  * - `gatsby-image`: https://gatsby.dev/gatsby-image
  * - `StaticQuery`: https://gatsby.dev/staticquery
  */
-
+// https://github.com/gatsbyjs/gatsby/issues/9882#issuecomment-462089503
+// https://github.com/gatsbyjs/gatsby/blob/26582d31ab14f7bac6d5738e4245ceca2e6d411d/packages/gatsby-transformer-sharp/src/fragments.js#L6
 const Image = () => (
   <StaticQuery
     query={graphql`
       query {
         placeholderImage: file(relativePath: { eq: "avatar.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid
+            fixed(width: 150) {
+              base64
+              width
+              height
+              src
+              srcSet
             }
           }
         }
       }
     `}
-    render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
+    render={data => (
+      <Img
+        style={{ borderRadius: '50%' }}
+        fixed={data.placeholderImage.childImageSharp.fixed}
+      />
+    )}
   />
 )
 export default Image
