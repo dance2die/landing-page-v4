@@ -1,7 +1,5 @@
 @import 'layout.reset';
-
-$break-small: 600px;
-$media-small: 'screen and (max-width: 600px)';
+@import '../styles/global';
 
 main {
   height: 100%;
@@ -11,9 +9,6 @@ main {
     / 1fr 1fr;
 
   @media #{$media-small} {
-    grid:
-      50vh
-      1fr
-      / 1fr;
+    grid: 450px 1fr / 1fr;
   }
 }

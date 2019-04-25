@@ -1,3 +1,12 @@
+@import '../../styles/global';
+
 .description {
-  background-color: blue;
+  background-color: white;
+  font-size: 3rem;
+
+  overflow: auto;
+
+  @media #{$media-small} {
+    overflow: none;
+  }
 }

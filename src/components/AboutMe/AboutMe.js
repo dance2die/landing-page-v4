@@ -13,8 +13,9 @@ import './AboutMe.scss'
 const Name = () => <h2 className="name">Sung M. Kim</h2>
 const Detail = () => (
   <div className="detail">
-    <div>An Infinite Learner</div>
-    <div>Currently focusing on Front-end development</div>
+    <div>A Software Engineer</div>
+    <div>&</div>
+    <div>Infinite Learner</div>
   </div>
 )
 const Social = () => (
