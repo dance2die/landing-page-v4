@@ -10,12 +10,22 @@ footer {
 
 .description {
   background-color: white;
-  font-size: 2rem;
+  font-size: 2.5rem;
+
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 
   overflow: auto;
   padding: 2rem;
 
+  @media #{$media-medium} {
+    font-size: 2rem;
+    padding: 1.1rem;
+  }
+
   @media #{$media-small} {
+    font-size: 1.85rem;
     overflow: none;
     padding: 0.95rem;
   }

@@ -18,8 +18,8 @@ function Description() {
           frontend.
         </section>
         <section className="of-love">
-          Been living and breathing .NET & C# but felt in love with JavaScript.
-          The library I've been working mostly is React.
+          Felt in love 💖 with JavaScript & the library I've been working mostly
+          is React.
         </section>
       </article>
       <article className="what I do">
