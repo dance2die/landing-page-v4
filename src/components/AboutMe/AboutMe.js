@@ -4,6 +4,7 @@ import {
   FaStackOverflow,
   FaInstagram,
   FaEnvelope,
+  FaGithub,
 } from 'react-icons/fa'
 
 import Avatar from '../Avatar'
@@ -29,6 +30,9 @@ const Social = () => (
   <div className="social">
     <SocialLink url="https://twitter.com/dance2die">
       <FaTwitter />
+    </SocialLink>
+    <SocialLink url="https://github.com/dance2die">
+      <FaGithub />
     </SocialLink>
     <SocialLink url="https://www.instagram.com/dance2die/">
       <FaInstagram />
