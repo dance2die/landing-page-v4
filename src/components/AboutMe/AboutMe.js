@@ -14,8 +14,9 @@ const Name = () => <h2 className="name">Sung M. Kim</h2>
 const Detail = () => (
   <div className="detail">
     <div>A Software Engineer</div>
-    <div>&</div>
-    <div>Infinite Learner</div>
+    <div className="of-what">
+      <span className="and">&</span> <span>Infinite Learner</span>
+    </div>
   </div>
 )
 const Social = () => (
