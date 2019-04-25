@@ -7,7 +7,7 @@ import './Description.scss'
 function Description() {
   return (
     <div className="description">
-      <h1 className="greeting">Hi, I am Sung 👋</h1>
+      <h1 className="greeting">👋 Hi, I am Sung</h1>
       <article className="introduction">
         <section className="of-what">
           I am a <strong>Software Engineer</strong> living in New York City, the

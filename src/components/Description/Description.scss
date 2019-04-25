@@ -5,7 +5,7 @@ section {
 }
 
 footer {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .description {
@@ -17,27 +17,28 @@ footer {
   hyphens: auto;
 
   overflow: auto;
-  padding: 2rem;
+  padding: 4rem 14rem 4rem 4rem;
 
   @media #{$media-medium} {
     font-size: 2rem;
-    padding: 1.1rem;
+    padding: 4rem 3rem 4rem 4rem;
   }
 
   @media #{$media-small} {
-    font-size: 1.85rem;
+    font-size: 1.5rem;
     overflow: none;
-    padding: 0.95rem;
+    padding: 4rem;
   }
 }
 
 .greeting {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+
   &::after {
     content: '';
     display: block;
     width: 33%;
-    padding: 10px 0;
+    padding: 15px;
     border-bottom: 1px solid $border-color;
   }
 }
