@@ -1,5 +1,18 @@
 @import '../../styles/global';
 
+$svg_size: 30px;
+
+svg {
+  width: $svg_size;
+  height: $svg_size;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+svg:hover {
+  transform: scale(1.5);
+}
+
 .about-me {
   background-color: #2c2d33;
   color: white;
