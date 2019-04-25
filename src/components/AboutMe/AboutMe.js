@@ -12,7 +12,7 @@ import ExternalLink from '../ExternalLink'
 
 import './AboutMe.scss'
 
-const Name = () => <h2 className="name">Sung M. Kim</h2>
+const Name = () => <strong className="name">Sung M. Kim</strong>
 const Detail = () => (
   <div className="detail">
     <div>A Software Engineer</div>

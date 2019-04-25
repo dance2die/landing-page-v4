@@ -7,19 +7,21 @@ import './Description.scss'
 function Description() {
   return (
     <div className="description">
-      <h1 className="greeting">👋 Hi, I am Sung</h1>
+      <h1 className="greeting">
+        👋 Hi, I am <strong>Sung</strong>
+      </h1>
       <article className="introduction">
         <section className="of-what">
           I am a <strong>Software Engineer</strong> living in New York City, the
           Big Apple 🍎.
         </section>
         <section className="of-current">
-          I've working on mostly on backend and nowadays I am more passionate on
-          frontend.
+          I've working on mostly on <strong>backend</strong> and nowadays I am
+          more passionate on <strong>frontend</strong>.
         </section>
         <section className="of-love">
-          Felt in love 💖 with JavaScript & the library I've been working mostly
-          is React.
+          Felt in love 💖 with <strong>JavaScript</strong> & the library I've
+          been working mostly is <strong>React</strong>.
         </section>
       </article>
       <article className="what I do">
@@ -28,12 +30,13 @@ function Description() {
           <ExternalLink url="https://www.slightedgecoder.com/">
             blog
           </ExternalLink>{' '}
-          and is a site-wise moderator on{' '}
+          and is a <strong>moderator</strong> on{' '}
           <ExternalLink url="https://dev.to/dance2die">dev.to</ExternalLink>, an
           awesome online community for developers.
         </section>
         <section>
-          As a bilingual Korean-American, I translate and proofread{' '}
+          As a bilingual Korean-American, I <strong>translate</strong> and{' '}
+          <strong>proofread</strong>{' '}
           <ExternalLink url="https://allcontributors.org/">
             All Contributors
           </ExternalLink>{' '}
