@@ -10,7 +10,16 @@ svg {
 }
 
 svg:hover {
+  cursor: pointer;
   transform: scale(1.5);
+}
+
+a {
+  color: white;
+
+  &:hover {
+    color: $border-color;
+  }
 }
 
 .about-me {

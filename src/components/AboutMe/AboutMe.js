@@ -7,6 +7,7 @@ import {
 } from 'react-icons/fa'
 
 import Avatar from '../Avatar'
+import ExternalLink from '../ExternalLink'
 
 import './AboutMe.scss'
 
@@ -19,12 +20,25 @@ const Detail = () => (
     </div>
   </div>
 )
+
+const SocialLink = ({ url, children }) => (
+  <ExternalLink url={url}>{children}</ExternalLink>
+)
+
 const Social = () => (
   <div className="social">
-    <FaTwitter />
-    <FaInstagram />
-    <FaEnvelope />
-    <FaStackOverflow />
+    <SocialLink url="https://twitter.com/dance2die">
+      <FaTwitter />
+    </SocialLink>
+    <SocialLink url="https://www.instagram.com/dance2die/">
+      <FaInstagram />
+    </SocialLink>
+    <SocialLink url="https://stackoverflow.com/users/4035/sung-m-kim?tab=profile">
+      <FaStackOverflow />
+    </SocialLink>
+    <SocialLink url="mailto:sungmkim80@gmail.com?Subject=Hey">
+      <FaEnvelope />
+    </SocialLink>
   </div>
 )
 
