@@ -5,3 +5,13 @@ $border-color: #98b232;
 strong {
   font-weight: 700;
 }
+
+a {
+  color: #98b232;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    border-bottom-width: 100%;
+  }
+}
