@@ -3,7 +3,37 @@ import React from 'react'
 import './Description.scss'
 
 function Description() {
-  return <div className="description">Description</div>
+  return (
+    <div className="description">
+      <h2 className="greeting">Hi, I am Sung.</h2>
+      <article className="introduction">
+        <section className="of-what">
+          I am a Software Engineer living New York City, the Big Apple. I've
+          working on mostly on backend but been more passionate on frontend
+          lately.
+        </section>
+        <section className="of-love">
+          Been living and breathing .NET & C# but felt in love with JavaScript
+          lately. The library I've been working mostly is React.
+        </section>
+      </article>
+      <article className="what I do">
+        <p>
+          I have been writing a blog and also been moderating on dev.to and also
+          monitors #react tag
+        </p>
+        <p>
+          You can find me on Twitter and also on Github and More to say? An
+          email might work better.
+        </p>
+      </article>
+      <footer>
+        © {new Date().getFullYear()} Sung M. Kim, Built with
+        {` `}
+        <a href="https://www.gatsbyjs.org">Gatsby</a>
+      </footer>
+    </div>
+  )
 }
 
 export default Description

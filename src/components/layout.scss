@@ -4,12 +4,16 @@ $break-small: 600px;
 $media-small: 'screen and (max-width: 600px)';
 
 main {
+  height: 100%;
   display: grid;
   grid:
-    1fr
+    100vh
     / 1fr 1fr;
 
   @media #{$media-small} {
-    grid: 1fr / 1fr;
+    grid:
+      50vh
+      1fr
+      / 1fr;
   }
 }
