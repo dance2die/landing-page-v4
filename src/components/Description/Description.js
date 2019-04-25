@@ -8,8 +8,11 @@ function Description() {
       <h1 className="greeting">Hi, I am Sung.</h1>
       <article className="introduction">
         <section className="of-what">
-          I am a Software Engineer living New York City, the Big Apple. I've
-          working on mostly on backend but been more passionate on frontend
+          I am a <strong>Software Engineer</strong> living in New York City, the
+          Big Apple 🍎.
+        </section>
+        <section className="of-current">
+          I've working on mostly on backend but been more passionate on frontend
           lately.
         </section>
         <section className="of-love">
@@ -18,14 +21,14 @@ function Description() {
         </section>
       </article>
       <article className="what I do">
-        <p>
+        <section>
           I have been writing a blog and also been moderating on dev.to and also
-          monitors #react tag
-        </p>
-        <p>
+          monitors the #react tag.
+        </section>
+        <section>
           You can find me on Twitter and also on Github and More to say? An
           email might work better.
-        </p>
+        </section>
       </article>
       <footer>
         © {new Date().getFullYear()} Sung M. Kim, Built with
