@@ -10,6 +10,7 @@ import {
 import Avatar from '../Avatar'
 import ExternalLink from '../ExternalLink'
 
+// import background from '../../images/background.jpg'
 import './AboutMe.scss'
 
 const Name = () => <strong className="name">Sung M. Kim</strong>

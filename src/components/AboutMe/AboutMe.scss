@@ -19,7 +19,12 @@ svg:hover {
 }
 
 .about-me {
-  background-color: #2c2d33;
+  // https://css-tricks.com/tinted-images-multiple-backgrounds/
+  // https://unsplash.com/photos/DD1fSz2HF1s
+  background: linear-gradient(rgba(44, 45, 51, 0.8), rgba(44, 45, 51, 0.95)),
+    url('../../images/background.jpg');
+  // https://www.w3schools.com/cssref/pr_background-image.asp
+  background-size: cover;
   color: white;
   position: sticky;
   top: 0;
