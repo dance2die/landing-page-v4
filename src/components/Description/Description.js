@@ -16,8 +16,8 @@ function Description() {
           Big Apple 🍎.
         </section>
         <section className="of-current">
-          I've working on mostly on <strong>backend</strong> and nowadays I am
-          more passionate on <strong>frontend</strong>.
+          I've worked on mostly on <strong>backend</strong> and nowadays I am
+          more passionate about <strong>frontend</strong>.
         </section>
         <section className="of-love">
           Felt in love 💖 with <strong>JavaScript</strong> & the library I've
@@ -26,7 +26,7 @@ function Description() {
       </article>
       <article className="what I do">
         <section>
-          I have been writing a{' '}
+          I have been sharing what I've learned on a{' '}
           <ExternalLink url="https://www.slightedgecoder.com/">
             blog
           </ExternalLink>{' '}
@@ -48,8 +48,8 @@ function Description() {
             Twitter
           </ExternalLink>{' '}
           and also on{' '}
-          <ExternalLink url="https://github.com/dance2die">GitHub</ExternalLink>{' '}
-          and More to say? An{' '}
+          <ExternalLink url="https://github.com/dance2die">GitHub</ExternalLink>
+          . More to say? An{' '}
           <ExternalLink url="sungmkim80@gmail.com?Subject=Hey">
             email
           </ExternalLink>{' '}
