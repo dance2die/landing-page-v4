@@ -20,7 +20,7 @@ function Description() {
           more passionate about <strong>frontend</strong>.
         </section>
         <section className="of-love">
-          Felt in love 💖 with <strong>JavaScript</strong> & the library I've
+          Fell in love 💖 with <strong>JavaScript</strong> & the library I've
           been working mostly is <strong>React</strong>.
         </section>
       </article>
