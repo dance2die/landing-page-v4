@@ -13,7 +13,7 @@ import ExternalLink from '../ExternalLink'
 // import background from '../../images/background.jpg'
 import './AboutMe.scss'
 
-const Name = () => <strong className="name">Sung M. Kim</strong>
+const Name = () => <h2 className="name">Sung M. Kim</h2>
 const Detail = () => (
   <div className="detail">
     <div>A Software Engineer</div>

@@ -33,9 +33,14 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `IBM Plex Sans`,
+            family: `Playfair Display`,
             subsets: [`latin`],
-            variants: [`400`, `700`],
+            variants: [`400`],
+          },
+          {
+            family: `Hind Madurai`,
+            subsets: [`latin`],
+            variants: [`400`],
           },
         ],
       },
