@@ -9,7 +9,7 @@ import Description from '../components/Description'
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={['sung m. kim', 'dance2die', 'home']} />
+    <SEO keywords={['Sung M. Kim', 'dance2die', 'home']} />
     <AboutMe />
     <Description />
   </Layout>

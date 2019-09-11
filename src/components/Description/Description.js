@@ -27,10 +27,8 @@ function Description() {
       <article className="what I do">
         <section>
           I have been sharing what I've learned on a{' '}
-          <ExternalLink url="https://www.slightedgecoder.com/">
-            blog
-          </ExternalLink>{' '}
-          and is a <strong>moderator</strong> on{' '}
+          <ExternalLink url="https://sung.codes/">blog</ExternalLink> and is a{' '}
+          <strong>moderator</strong> on{' '}
           <ExternalLink url="https://dev.to/dance2die">dev.to</ExternalLink>, an
           awesome online community for developers.
         </section>

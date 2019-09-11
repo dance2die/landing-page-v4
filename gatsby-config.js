@@ -1,8 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `Hi, I am Sung M. Kim`,
-    description: `Sung's personal page`,
+    title: `Sung M. Kim (aka dance2die)'s Home Page`,
+    titleTemplate: '%s · aka dance2die',
+    description: `Hi, I am Sung M. Kim (a.k.a dance2die) and this is my home 🏡 page.
+    You can find out about my background and interests as well as contact info.`,
+    url: 'https://sungkim.co',
+    image: '/images/avatar-seo.jpg', // Path to your image you placed in the 'static' folder
     author: `@dance2die`,
+    twitterUsername: '@dance2die',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

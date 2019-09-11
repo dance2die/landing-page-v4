@@ -13,64 +13,49 @@ import { useStaticQuery, graphql } from 'gatsby'
 import favicon16 from '../images/favicon16.png'
 import favicon32 from '../images/favicon32.png'
 
-function SEO({ description, lang, meta, keywords, title }) {
-  const { site } = useStaticQuery(
+function SEO({ lang, meta, keywords, description, title, image, pathname }) {
+  const {
+    site: {
+      defaultTitle,
+      defaultDescription,
+      defaultImage,
+      titleTemplate,
+      siteUrl,
+      twitterUsername,
+    },
+  } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
-            title
-            description
-            author
+            defaultTitle: title
+            titleTemplate
+            defaultDescription: description
+            siteUrl: url
+            defaultImage: image
+            twitterUsername
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const seo = {
+    title: title || defaultTitle,
+    description: description || defaultDescription,
+    image: `${siteUrl}${image || defaultImage}`,
+    url: `${siteUrl}${pathname || '/'}`,
+    titleTemplate,
+    twitterUsername,
+  }
 
+  // https://www.gatsbyjs.org/docs/add-seo-component/
   return (
     <Helmet
-      htmlAttributes={{
-        lang,
-      }}
+      htmlAttributes={{ lang }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ]
+      titleTemplate={`%s | ${seo.title}`}
+      meta={[]
         .concat(
           keywords.length > 0
             ? {
@@ -94,7 +79,25 @@ function SEO({ description, lang, meta, keywords, title }) {
           href: `${favicon32}`,
         },
       ]}
-    />
+    >
+      <meta name="description" content={seo.description} />
+      <meta name="image" content={seo.image} />
+      {seo.url && <meta property="og:url" content={seo.url} />}
+      {seo.title && <meta property="og:title" content={seo.title} />}
+      {seo.description && (
+        <meta property="og:description" content={seo.description} />
+      )}
+      {seo.image && <meta property="og:image" content={seo.image} />}
+      <meta name="twitter:card" content="summary_large_image" />
+      {twitterUsername && (
+        <meta name="twitter:creator" content={twitterUsername} />
+      )}
+      {seo.title && <meta name="twitter:title" content={seo.title} />}
+      {seo.description && (
+        <meta name="twitter:description" content={seo.description} />
+      )}
+      {seo.image && <meta name="twitter:image" content={seo.image} />}
+    </Helmet>
   )
 }
 
@@ -102,15 +105,20 @@ SEO.defaultProps = {
   lang: `en`,
   meta: [],
   keywords: [],
-  description: ``,
+  description: `Sung M. Kim's home page`,
+  title: 'Sung M. Kim (aka dance2die)',
+  image: '/images/avatar.jpg',
+  pathname: 'https://sungkim.co',
 }
 
 SEO.propTypes = {
-  description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   keywords: PropTypes.arrayOf(PropTypes.string),
+  description: PropTypes.string,
   title: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  pathname: PropTypes.string,
 }
 
 export default SEO
