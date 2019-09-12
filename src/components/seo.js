@@ -92,9 +92,9 @@ SEO.defaultProps = {
   lang: `en`,
   meta: [],
   keywords: [],
-  description: `Sung M. Kim's home page`,
-  title: 'Sung M. Kim (aka dance2die)',
-  image: '/images/avatar.jpg',
+  description: null,
+  title: null,
+  image: null,
 }
 
 SEO.propTypes = {
