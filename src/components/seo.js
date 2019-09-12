@@ -14,7 +14,7 @@ import favicon16 from '../images/favicon16.png'
 import favicon32 from '../images/favicon32.png'
 import seoImage from '../images/avatar-seo.jpg'
 
-function SEO({ keywords = [] }) {
+function SEO({ lang = 'en', keywords = [] }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -69,7 +69,7 @@ function SEO({ keywords = [] }) {
       <meta property="og:description" content={seo.description} />
       <meta property="og:image" content={seo.image} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content={twitterUsername} />
+      <meta name="twitter:creator" content={seo.twitterUsername} />
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
