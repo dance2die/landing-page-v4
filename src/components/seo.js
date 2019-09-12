@@ -23,7 +23,7 @@ function SEO({ keywords = [] }) {
             defaultTitle: title
             titleTemplate
             defaultDescription: description
-            siteUrl: url
+            url
             twitterUsername
           }
         }
@@ -35,9 +35,9 @@ function SEO({ keywords = [] }) {
     title: site.defaultTitle,
     description: site.defaultDescription,
     image: seoImage,
-    url: siteUrl,
-    titleTemplate,
-    twitterUsername,
+    url: site.url,
+    titleTemplate: site.titleTemplate,
+    twitterUsername: site.twitterUsername,
     keywords: keywords.join(`, `),
   }
 
