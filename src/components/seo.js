@@ -14,17 +14,8 @@ import favicon16 from '../images/favicon16.png'
 import favicon32 from '../images/favicon32.png'
 import seoImage from '../images/avatar-seo.jpg'
 
-function SEO({ lang, meta, keywords, description, title, image }) {
-  const {
-    site: {
-      defaultTitle,
-      defaultDescription,
-      defaultImage,
-      titleTemplate,
-      siteUrl,
-      twitterUsername,
-    },
-  } = useStaticQuery(
+function SEO({ keywords = [] }) {
+  const { site } = useStaticQuery(
     graphql`
       query {
         site {
@@ -33,7 +24,6 @@ function SEO({ lang, meta, keywords, description, title, image }) {
             titleTemplate
             defaultDescription: description
             siteUrl: url
-            defaultImage: image
             twitterUsername
           }
         }
@@ -42,9 +32,8 @@ function SEO({ lang, meta, keywords, description, title, image }) {
   )
 
   const seo = {
-    title: title || defaultTitle,
-    description: description || defaultDescription,
-    // image: `${siteUrl}${image || defaultImage}`,
+    title: title || site.defaultTitle,
+    description: description || site.defaultDescription,
     image: seoImage,
     url: siteUrl,
     titleTemplate,
@@ -88,22 +77,22 @@ function SEO({ lang, meta, keywords, description, title, image }) {
   )
 }
 
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  keywords: [],
-  description: null,
-  title: null,
-  image: null,
-}
+// SEO.defaultProps = {
+//   lang: `en`,
+//   meta: [],
+//   keywords: [],
+//   description: null,
+//   title: null,
+//   image: null,
+// }
 
-SEO.propTypes = {
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  keywords: PropTypes.arrayOf(PropTypes.string),
-  description: PropTypes.string,
-  title: PropTypes.string.isRequired,
-  image: PropTypes.string,
-}
+// SEO.propTypes = {
+//   lang: PropTypes.string,
+//   meta: PropTypes.arrayOf(PropTypes.object),
+//   keywords: PropTypes.arrayOf(PropTypes.string),
+//   description: PropTypes.string,
+//   title: PropTypes.string.isRequired,
+//   image: PropTypes.string,
+// }
 
 export default SEO
