@@ -15,30 +15,31 @@ import favicon32 from '../images/favicon32.png'
 import seoImage from '../images/avatar-seo.jpg'
 
 function SEO({ lang = 'en', keywords = [] }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            defaultTitle: title
-            titleTemplate
-            defaultDescription: description
-            url
-            twitterUsername
-          }
-        }
-      }
-    `
-  )
+  // const { site } = useStaticQuery(
+  //   graphql`
+  //     query {
+  //       site {
+  //         siteMetadata {
+  //           defaultTitle: title
+  //           titleTemplate
+  //           defaultDescription: description
+  //           url
+  //           twitterUsername
+  //         }
+  //       }
+  //     }
+  //   `
+  // )
 
   const seo = {
-    title: site.defaultTitle,
-    description: site.defaultDescription,
+    title: `Sung M. Kim (aka dance2die)'s Home Page`,
+    description: `Hi, I am Sung M. Kim (a.k.a dance2die) and this is my home 🏡 page.
+    You can find out about my background and interests as well as contact info.`,
     image: seoImage,
-    url: site.url,
-    titleTemplate: site.titleTemplate,
-    twitterUsername: site.twitterUsername,
-    keywords: keywords.join(`, `),
+    url: 'https://sungkim.co',
+    titleTemplate: '%s · aka dance2die',
+    twitterUsername: '@dance2die',
+    keywords: 'sung m. kim, dance2die, home',
   }
 
   // https://www.gatsbyjs.org/docs/add-seo-component/
