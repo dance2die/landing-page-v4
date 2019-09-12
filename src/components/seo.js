@@ -32,8 +32,8 @@ function SEO({ keywords = [] }) {
   )
 
   const seo = {
-    title: title || site.defaultTitle,
-    description: description || site.defaultDescription,
+    title: site.defaultTitle,
+    description: site.defaultDescription,
     image: seoImage,
     url: siteUrl,
     titleTemplate,
