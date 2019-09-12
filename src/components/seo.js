@@ -14,7 +14,7 @@ import favicon16 from '../images/favicon16.png'
 import favicon32 from '../images/favicon32.png'
 import seoImage from '../images/avatar-seo.jpg'
 
-function SEO({ lang, meta, keywords, description, title, image, pathname }) {
+function SEO({ lang, meta, keywords, description, title, image }) {
   const {
     site: {
       defaultTitle,
@@ -46,27 +46,17 @@ function SEO({ lang, meta, keywords, description, title, image, pathname }) {
     description: description || defaultDescription,
     // image: `${siteUrl}${image || defaultImage}`,
     image: seoImage,
-    url: `${siteUrl}${pathname || '/'}`,
+    url: siteUrl,
     titleTemplate,
     twitterUsername,
+    keywords: keywords.join(`, `),
   }
 
   // https://www.gatsbyjs.org/docs/add-seo-component/
   return (
     <Helmet
       htmlAttributes={{ lang }}
-      title={title}
-      titleTemplate={`%s | ${seo.title}`}
-      meta={[]
-        .concat(
-          keywords.length > 0
-            ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
-              }
-            : []
-        )
-        .concat(meta)}
+      titleTemplate={seo.titleTemplate}
       link={[
         {
           rel: 'icon',
@@ -83,22 +73,17 @@ function SEO({ lang, meta, keywords, description, title, image, pathname }) {
       ]}
     >
       <meta name="description" content={seo.description} />
+      <meta name="keywords" content={seo.keywords} />
       <meta name="image" content={seo.image} />
-      {seo.url && <meta property="og:url" content={seo.url} />}
-      {seo.title && <meta property="og:title" content={seo.title} />}
-      {seo.description && (
-        <meta property="og:description" content={seo.description} />
-      )}
-      {seo.image && <meta property="og:image" content={seo.image} />}
+      <meta property="og:url" content={seo.url} />
+      <meta property="og:title" content={seo.title} />
+      <meta property="og:description" content={seo.description} />
+      <meta property="og:image" content={seo.image} />
       <meta name="twitter:card" content="summary_large_image" />
-      {twitterUsername && (
-        <meta name="twitter:creator" content={twitterUsername} />
-      )}
-      {seo.title && <meta name="twitter:title" content={seo.title} />}
-      {seo.description && (
-        <meta name="twitter:description" content={seo.description} />
-      )}
-      {seo.image && <meta name="twitter:image" content={seo.image} />}
+      <meta name="twitter:creator" content={twitterUsername} />
+      <meta name="twitter:title" content={seo.title} />
+      <meta name="twitter:description" content={seo.description} />
+      <meta name="twitter:image" content={seo.image} />
     </Helmet>
   )
 }
@@ -110,7 +95,6 @@ SEO.defaultProps = {
   description: `Sung M. Kim's home page`,
   title: 'Sung M. Kim (aka dance2die)',
   image: '/images/avatar.jpg',
-  pathname: 'https://sungkim.co',
 }
 
 SEO.propTypes = {
@@ -120,7 +104,6 @@ SEO.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string.isRequired,
   image: PropTypes.string,
-  pathname: PropTypes.string,
 }
 
 export default SEO
