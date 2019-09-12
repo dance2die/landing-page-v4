@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import favicon16 from '../images/favicon16.png'
 import favicon32 from '../images/favicon32.png'
+import seoImage from '../images/avatar-seo.jpg'
 
 function SEO({ lang, meta, keywords, description, title, image, pathname }) {
   const {
@@ -43,7 +44,8 @@ function SEO({ lang, meta, keywords, description, title, image, pathname }) {
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-    image: `${siteUrl}${image || defaultImage}`,
+    // image: `${siteUrl}${image || defaultImage}`,
+    image: seoImage,
     url: `${siteUrl}${pathname || '/'}`,
     titleTemplate,
     twitterUsername,
