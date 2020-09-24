@@ -33,23 +33,23 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Playfair Display`,
-            subsets: [`latin`],
-            variants: [`400`],
-          },
-          {
-            family: `Hind Madurai`,
-            subsets: [`latin`],
-            variants: [`400`],
-          },
-        ],
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       {
+    //         family: `Playfair Display`,
+    //         subsets: [`latin`],
+    //         variants: [`400`],
+    //       },
+    //       {
+    //         family: `Hind Madurai`,
+    //         subsets: [`latin`],
+    //         variants: [`400`],
+    //       },
+    //     ],
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
